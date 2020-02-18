@@ -1,10 +1,13 @@
 package sw2.clase11ej1servidorrest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "categories")
+@JsonIgnoreProperties({"picture","description"})
 public class Category {
 
     @Id
